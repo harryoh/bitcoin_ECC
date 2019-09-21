@@ -154,6 +154,7 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
+        /*
         vSeeds.emplace_back("seed.bitcoin.sipa.be"); // Pieter Wuille, only supports x1, x5, x9, and xd
         vSeeds.emplace_back("dnsseed.bluematt.me"); // Matt Corallo, only supports x9
         vSeeds.emplace_back("dnsseed.bitcoin.dashjr.org"); // Luke Dashjr
@@ -162,6 +163,9 @@ public:
         vSeeds.emplace_back("seed.btc.petertodd.org"); // Peter Todd, only supports x1, x5, x9, and xd
         vSeeds.emplace_back("seed.bitcoin.sprovoost.nl"); // Sjors Provoost
         vSeeds.emplace_back("dnsseed.emzy.de"); // Stephan Oeste
+        */
+        vSeeds.emplace_back("ec2-52-78-78-152.ap-northeast-2.compute.amazonaws.com"); // gist-nodeserver-01 on AWS
+        vSeeds.emplace_back("ec2-15-164-77-118.ap-northeast-2.compute.amazonaws.com"); // gist-nodeserver-02 on AWS
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -173,10 +177,6 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        // Todo: Remove
-        vFixedSeeds.clear();
-        vSeeds.clear();
-      
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
