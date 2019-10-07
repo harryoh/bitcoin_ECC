@@ -165,7 +165,7 @@ public:
         vSeeds.emplace_back("seed.bitcoin.sprovoost.nl"); // Sjors Provoost
         vSeeds.emplace_back("dnsseed.emzy.de"); // Stephan Oeste
 	*/
-	vSeeds.emplace_back("ec2-54-180-91-170.ap-northeast-2.compute.amazonaws.com"); // miningtest-node-01 on AWS	
+	vSeeds.emplace_back("ec2-13-54-124-19.ap-southeast-2.compute.amazonaws.com"); // miningtest-node-01 on AWS	
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
